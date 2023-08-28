@@ -1,0 +1,4 @@
+kind: Component
+metadata:
+  displayName: erply-webcomponents
+  description: Erply Web Components.

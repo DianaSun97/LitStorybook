@@ -1,0 +1,19 @@
+{
+  "description": "Erply Web Components",
+  "author": "Erply",
+  "license": "Apache-2.0",
+  "private": true,
+  "keywords": [
+    "erply"
+  ],
+  "scripts": {
+    "start:playground": "yarn workspace @erply/webcomponents-playground start",
+    "build:playground": "yarn workspace @erply/webcomponents-playground build"
+  },
+  "workspaces": [
+    "packages/playground"
+  ],
+  "dependencies": {
+    "@storybook/manager-api": "^7.3.1"
+  }
+}
