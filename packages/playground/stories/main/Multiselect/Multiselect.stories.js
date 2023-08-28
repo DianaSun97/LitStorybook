@@ -15,15 +15,16 @@ export default {
 };
 
 const Template = (args) => {
-    return html`<form method="post">
+    return html`<form method="post" style="padding-bottom: 70px;">
     <erp-multiselect
             placeholder="${args.placeholder}"
             ?join="${args.join}"
             name="${args.name}"
             ?disabled="${args.disabled}"
-            ?readonly="${args.readonly}">
+            ?readonly="${args.readonly}"
+            value="${args.join ? '2' : ''}">
         <option value="1">One</option>
-        <option value="2">Two</option>
+        <option value="2" ?selected="${!args.join}">Two</option>
         <option value="3">Three</option>
     </erp-multiselect>
 </form>`
