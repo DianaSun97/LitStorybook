@@ -31,5 +31,4 @@ export const Secondary = Template.bind({});
 Secondary.args = {
     type: 'secondary',
     text: 'Secondary button'
-
 };
