@@ -106,6 +106,7 @@ export class ErplyMultiselect extends LitElement {
         border-style: solid;
         border-width: 1px;
         padding: 4px;
+        background: rgb(255, 255, 255);
     }
     
     .open-close {
