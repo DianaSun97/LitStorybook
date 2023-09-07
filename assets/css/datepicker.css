@@ -1,0 +1,104 @@
+
+.date-picker-calendar table {
+    border: 1px solid #e1e6ef;
+    max-width: 35rem;
+    background-color: white;
+    border-radius: 5px;
+}
+.date-picker-calendar table, thead, tr, th, td {
+    border-collapse: collapse;
+}
+
+.date-picker-calendar thead {
+    border-bottom: 1px solid #e1e6ef;
+}
+
+.date-picker-calendar td {
+    cursor: pointer;
+    height: 3rem;
+    max-height: 3rem;
+    width: 3rem;
+    max-width: 3rem;
+    padding: 0;
+    margin:0;
+}
+
+.date-picker-calendar td:not(.selected):before:hover {
+    background-color: rgb(139, 180, 238);
+    content: attr(data-day);
+    border-radius: 10px;
+    margin: auto;
+    height: 2rem;
+    width: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-picker-calendar span {
+    cursor: pointer;
+}
+
+.date-picker-calendar th {
+    padding: 1rem;
+}
+
+.date-picker-calendar td.date {
+    text-align: center;
+    border-collapse: collapse;
+}
+
+
+.date-picker-calendar .today {
+    border: 1px solid rgba(22, 110, 232, 1) inset;
+    border-radius: 10px;
+
+}
+
+.date-picker-calendar .selected::before {
+    content: attr(data-day);
+    position: absolute;
+    transform: translate(25%, -25%);
+    background-color: rgba(22, 110, 232, 1);
+    border-radius: 10px;
+    margin: auto;
+    height: 2rem;
+    width: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-picker-calendar .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+.date-picker-calendar .flex button {
+    border: none;
+    background-color: #F5F5F5;
+    font-size: 24px;
+    border-radius: 5px;
+    margin: 0;
+    line-height: 1;
+    color: #1D2433dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.date-picker-calendar .flex button:hover {
+    background-color: #D6DCDE;
+    color: #1D2433;
+
+}
+
+.in-range p {
+    background-color: rgb(137, 174, 226);
+}
