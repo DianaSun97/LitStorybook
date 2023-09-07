@@ -20,6 +20,9 @@ export default {
 const Template = (args) => {
     return html`
         <div class="table-container">
+        <script>
+            new document.TableAccordion();
+        </script>
         <table class="table table--responsive">
             <thead>
             <tr class="text-left">
@@ -29,21 +32,24 @@ const Template = (args) => {
             </thead>
             <tbody>
                 <tr class="row-table">
-                <td data-title="${args.textTableHeader}">${args.textTableRow}</td>
-                <td data-title="${args.textTableHeader}">${args.textTableRow}</td>
-            </tr>
-            <tr class="row-table">
-                <td data-title="${args.textTableHeader}">${args.textTableRow}</td>
-                <td data-title="${args.textTableHeader}">${args.textTableRow}</td>
-            </tr>
+                    <td data-title="${args.textTableHeader}">${args.textTableRow}</td>
+                    <td data-title="${args.textTableHeader}">${args.textTableRow}</td>
+                </tr>
+                <tr class="expandable-row" style="display: none;">
+                    ${args.textTableRow}
+                    <td data-title="${args.textTableHeader}">${args.textTableRow}</td>
+                </tr>
+                <tr class="row-table">
+                    <td data-title="${args.textTableHeader}">${args.textTableRow}</td>
+                    <td data-title="${args.textTableHeader}">${args.textTableRow}</td>
+                </tr>
                 <tr class="expandable-row" style="display: none;">
                    ${args.textTableRow}
                     <td data-title="${args.textTableHeader}">${args.textTableRow}</td>
                 </tr>
             </tbody>
         </table>
-    </div>
-</div>`
+    </div>`
 }
 
 
