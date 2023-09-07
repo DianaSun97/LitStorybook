@@ -1,4 +1,4 @@
-import {css, html, nothing, LitElement} from 'lit';
+import {css, html, LitElement} from 'lit';
 
 export class ErplyMultiselect extends LitElement {
     static formAssociated = true;
@@ -186,12 +186,14 @@ export class ErplyMultiselect extends LitElement {
         this._updateForm();
         this.requestUpdate();
     }
+
     _remove(e) {
         const name = e.target.getAttribute('data-value');
         this._optionsRaw.find((opt) => opt.value === name).selected = false;
         this._updateForm();
         this.requestUpdate();
     }
+
     _checked(e) {
         const name = e.target.getAttribute('data-value');
         const value = e.target.checked;
@@ -207,10 +209,15 @@ export class ErplyMultiselect extends LitElement {
                 <div class="badges-and-close">
                     <div class="badges">
                         ${selected.map((opt) =>
-                                html`<div class="badge">${opt.title}<button class="button button--close icon-Close" data-value="${opt.value}" @click="${this._remove}"></button></div>`
+                                html`
+                                    <div class="badge">${opt.title}
+                                        <button class="button button--close icon-Close" data-value="${opt.value}"
+                                                @click="${this._remove}"></button>
+                                    </div>`
                         )}
                     </div>
-                    <button class="open-close button icon-Chevron-${this._isOpen ? 'Up' : 'Down'}-Closed" @click="${this._openOrClose}"></button>
+                    <button class="open-close button icon-Chevron-${this._isOpen ? 'Up' : 'Down'}-Closed"
+                            @click="${this._openOrClose}"></button>
                 </div>
                 <div class="dropdown ${!this._isOpen ? 'hidden' : ''}">
                     <div>
@@ -218,14 +225,15 @@ export class ErplyMultiselect extends LitElement {
                         <label for="all">Select all</label>
                     </div>
                     ${this._options.map((opt) => {
-            const id = `${this.name}-${opt.value}`;
-            return html`
+                        const id = `${this.name}-${opt.value}`;
+                        return html`
                             <div>
-                                <input id="${id}" type="checkbox" data-value="${opt.value}" @click="${this._checked}" .checked="${opt.selected}"/>
+                                <input id="${id}" type="checkbox" data-value="${opt.value}" @click="${this._checked}"
+                                       .checked="${opt.selected}"/>
                                 <label for="${id}">${opt.title}</label>
                             </div>
                         `
-        })}
+                    })}
                 </div>
             </div>
         `

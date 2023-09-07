@@ -14,6 +14,7 @@ export default {
         layout: { control: {type: 'select'}, options: ['layout-row-between','layout-row-start','layout-row-end'] },
         text: { control: {type: 'text'}},
         textTableRow: { control: {type: 'text'}},
+        textTableHeader: { control: {type: 'text'}},
     },
     parameters: {},
 };
@@ -33,18 +34,18 @@ const Template = (args) => {
             <table class="table table--responsive">
                 <thead>
                 <tr class="text-left">
-                    <th>ID</th>
-                    <th>Name</th>
+                    <th>${args.textTableHeader}</th>
+                    <th>${args.textTableHeader}</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="row-table">
-                    <td data-title="#">${args.textTableRow}</td>
-                    <td data-title="Name">${args.textTableRow}</td>
+                <tr cass="row-table"l>
+                    <td data-title="${args.textTableHeader}">${args.textTableRow}</td>
+                    <td data-title="${args.textTableHeader}">${args.textTableRow}</td>
                 </tr>
                 <tr class="row-table">
-                    <td data-title="#">${args.textTableRow}</td>
-                    <td data-title="Name">${args.textTableRow}</td>
+                    <td data-title="${args.textTableHeader}">${args.textTableRow}</td>
+                    <td data-title="${args.textTableHeader}">${args.textTableRow}</td>
                 </tr>
                 </tbody>
             </table>
@@ -57,5 +58,6 @@ CardsTable .args = {
     padding: '16',
     text: 'Lorem ipsum',
     textTableRow: 'Lorem ipsum',
-    icons: 'Calendar-Month'
+    icons: 'Calendar-Month',
+    textTableHeader: 'Lorem ipsum'
 };
