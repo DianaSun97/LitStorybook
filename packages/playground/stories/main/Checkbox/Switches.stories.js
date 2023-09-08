@@ -2,7 +2,7 @@ import "../../../../../assets/css/_style.css"
 import {html} from "lit";
 
 export default {
-    title: 'Components / Checkbox',
+    title: 'Components / Switches',
     argTypes: {
 
         margin: { control: {type: 'select'}, options: ['0', '2', '4', '8', '16', '18', '20', '24', '32', '36', '48', '64'] },
@@ -19,11 +19,12 @@ export default {
 
 const Template = (args) => {
     return html`
-    <div class="checkbox margin-${args.margin} margin-left-${args.left} margin-top-${args.top} margin-right-${args.right} padding-${args.padding}" ?disabled="${args.disabled}">
-        <input id="one" name="#" type="checkbox" value=""/>
-        <label for="one">${args.text}</label>
-    </div>
-      `
+        <div class="switches-main b2 margin-${args.margin} margin-left-${args.left} margin-top-${args.top} margin-right-${args.right} padding-${args.padding}" ?disabled="${args.disabled}"  id="button-15">
+            <input type="checkbox" class="switches"/>
+            <div class="knobs"></div>
+            <div class="layer"></div>
+        </div>
+    `
 }
 
 export const Icons = Template.bind({});

@@ -1,8 +1,9 @@
 import "../../../../../assets/css/_style.css"
+import "../../../../../assets/css/togl.css"
 import {html} from "lit";
 
 export default {
-    title: 'Components / Checkbox',
+    title: 'Components / Togl',
     argTypes: {
 
         margin: { control: {type: 'select'}, options: ['0', '2', '4', '8', '16', '18', '20', '24', '32', '36', '48', '64'] },
@@ -19,11 +20,13 @@ export default {
 
 const Template = (args) => {
     return html`
-    <div class="checkbox margin-${args.margin} margin-left-${args.left} margin-top-${args.top} margin-right-${args.right} padding-${args.padding}" ?disabled="${args.disabled}">
-        <input id="one" name="#" type="checkbox" value=""/>
-        <label for="one">${args.text}</label>
-    </div>
-      `
+        <div class="form-check form-switch">
+            <label class="switch" for="addBagPrompt">
+                <input type="checkbox"  class="form-input" id="addBagPrompt" name="" value="1" checked >
+                <span class="slider round"></span>
+            </label>
+        </div>
+    `
 }
 
 export const Icons = Template.bind({});
