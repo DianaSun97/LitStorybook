@@ -1,6 +1,6 @@
 import "../../../../../assets/css/_style.css"
 import {html} from "lit";
-import "./TableAccordion";
+import "../../../../components/src/TableAccordion";
 
 export default {
     title: 'Components / TableAccordion',

@@ -1,6 +1,5 @@
-import "../../../../../assets/css/_style.css"
 import {html, nothing} from "lit";
-import "./Multiselect";
+import "../../../../components/src/Multiselect";
 
 export default {
     title: 'Components / Multiselect',

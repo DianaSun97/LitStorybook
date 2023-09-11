@@ -2,7 +2,7 @@
   "name": "@erply/webcomponents-playground",
   "private": true,
   "version": "0.0.1",
-  "description": "GpERP Web Components Playground",
+  "description": "GoERP Web Components Playground",
   "author": "Erply",
   "license": "Apache-2.0",
   "keywords": [

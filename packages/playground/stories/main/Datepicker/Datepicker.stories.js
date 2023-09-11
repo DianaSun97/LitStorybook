@@ -1,5 +1,5 @@
 import "../../../../../assets/css/datepicker.css"
-import "./Datepicker";
+import "../../../../components/src/Datepicker";
 import {html} from "lit";
 
 

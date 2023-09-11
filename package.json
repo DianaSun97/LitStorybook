@@ -7,10 +7,13 @@
     "erply"
   ],
   "scripts": {
+    "start:components": "yarn workspace goerp-lib dev",
+    "build:components": "yarn workspace goerp-lib build",
     "start:playground": "yarn workspace @erply/webcomponents-playground start",
     "build:playground": "yarn workspace @erply/webcomponents-playground build"
   },
   "workspaces": [
+    "packages/components",
     "packages/playground"
   ],
   "dependencies": {

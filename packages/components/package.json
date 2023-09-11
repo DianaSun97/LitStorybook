@@ -1,0 +1,32 @@
+{
+  "name": "goerp-lib",
+  "private": true,
+  "version": "0.0.1",
+  "description": "GoERP Web Components",
+  "author": "Erply",
+  "license": "Apache-2.0",
+  "keywords": [
+    "erply"
+  ],
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/goerp-lib.umd.cjs",
+  "module": "./dist/goerp-lib.js",
+  "exports": {
+    ".": {
+      "import": "./dist/goerp-lib.js",
+      "require": "./dist/goerp-lib.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lit": "^2.7.6"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5"
+  }
+}
