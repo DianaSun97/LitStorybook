@@ -67,6 +67,7 @@ export class ErplyMultiselect extends LitElement {
         box-shadow: none;
         background: rgb(255, 255, 255);
         cursor: pointer;
+        width: 100%;
     }
     
     .badge {
@@ -81,6 +82,7 @@ export class ErplyMultiselect extends LitElement {
         padding-top: 5px;
         padding-left: 5px;
         padding-right: 5px;
+       
     }
     
     .button{
@@ -119,12 +121,16 @@ export class ErplyMultiselect extends LitElement {
     
     .form {
         display: none;
+        width: 100%;
+        
     }
     .button--close {
         font-size: 16px;
         color: gray;
         margin-left: 4px;
         margin-right: 4px;
+   
+        
     }
   `;
 

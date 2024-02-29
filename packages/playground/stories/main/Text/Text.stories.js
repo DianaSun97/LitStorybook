@@ -7,6 +7,7 @@ export default {
     argTypes: {
         type: { control: {type: 'select'}, options: ['uppercase','lineThrough','italic','underline'] },
         color: { control: {type: 'select'}, options: ['gray','primary','red','green'] },
+        align: { control: {type: 'select'}, options: ['center','right','left'] },
         size: { control: {type: 'select'}, options: ['huge','big','medium','label','small'] },
         margin: { control: {type: 'select'}, options: ['0', '2', '4', '8', '16', '18', '20', '24', '32', '36', '48', '64'] },
         left: { control: {type: 'select'}, options: ['0', '2', '4', '8', '16', '18', '20', '24', '32', '36', '48', '64'] },
@@ -21,7 +22,7 @@ export default {
 
 const Template = (args) => {
     return html`
-    <p class="text-${args.type} text-${args.color} text-${args.size}  margin-${args.margin} margin-left-${args.left} margin-top-${args.top}  margin-right-${args.right} padding-${args.padding}">${args.text}</p>`
+    <p class="text-${args.type} text-${args.color} text-${args.size}  text-${args.align} margin-${args.margin} margin-left-${args.left} margin-top-${args.top}  margin-right-${args.right} padding-${args.padding}">${args.text}</p>`
 }
 
 export const Text = Template.bind({});

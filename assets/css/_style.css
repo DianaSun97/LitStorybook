@@ -2433,11 +2433,11 @@ a {
 }
 .text-label {
   font-size: 20px;
-  line-height: 1.3em;
+  line-height: 1.5em;
 }
 .text-small {
   font-size: 12px;
-  line-height: 1.3em;
+  line-height: 1.5em;
 }
 .text-body {
   font-size: 16px;
@@ -6753,6 +6753,12 @@ label {
  *    </button>
  *  </div>
  **/
+*:disabled {
+  background-color: linen;
+  color: dimgrey;
+  opacity: 1;
+}
+
 .formjoined {
   display: flex;
   margin-bottom: 20px;
@@ -7686,6 +7692,12 @@ button[disabled]:active {
   color: #fff;
   font-size: 14px;
 }
+.button--green.active {
+  margin-bottom: 0;
+  font-weight: 500;
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+}
 
 .button--green--defaut {
   background-color: #F0FFF5;
@@ -7716,7 +7728,7 @@ button[disabled]:active {
 }
 .button--navigation.active {
   margin-bottom: 0;
-  font-weight: bold;
+  font-weight: 500;
   background-color: #fff;
   border-radius: 5px 5px 0 0;
 }
@@ -8659,7 +8671,7 @@ button[disabled]:active {
   color: #F7BC45;
 }
 
-.text-op:before {
+.text-op-status:before {
   content: "";
   width: 10px;
   height: 10px;
@@ -8669,7 +8681,7 @@ button[disabled]:active {
   margin: 0px 5px 0px 5px;
 }
 
-.text-error:before {
+.text-error-status:before {
   content: "";
   width: 10px;
   height: 10px;
@@ -8679,7 +8691,7 @@ button[disabled]:active {
   margin: 0px 5px 0px 5px;
 }
 
-.text-progress:before {
+.text-progress-status:before {
   content: "";
   width: 10px;
   height: 10px;
@@ -8689,7 +8701,7 @@ button[disabled]:active {
   margin: 0px 5px 0px 5px;
 }
 
-.text-success:before {
+.text-success-status:before {
   content: "";
   width: 10px;
   height: 10px;
@@ -8699,7 +8711,7 @@ button[disabled]:active {
   margin: 0px 5px 0px 5px;
 }
 
-.text-warning:before {
+.text-warning-status:before {
   content: "";
   width: 10px;
   height: 10px;
