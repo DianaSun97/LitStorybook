@@ -2403,8 +2403,9 @@ h3 {
 
 a {
   font-size: 15px;
-  color: #1562CE;
+  color: rgba(29, 36, 51, 0.8);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .flex-block-pagination a {
@@ -2650,105 +2651,139 @@ h4 {
  */
 .bg-primary {
   background-color: #3D8AF6;
+  border-radius: 5px;
 }
 .bg-dark {
   background-color: #0A253C;
+  border-radius: 5px;
 }
 .bg-secondary {
   background-color: #5221B5;
+  border-radius: 5px;
 }
 .bg-white {
   background-color: #fff;
+  border-radius: 5px;
 }
 .bg-success {
   background-color: #5ABB7A;
+  border-radius: 5px;
 }
 .bg-info {
   background-color: #5bc0de;
+  border-radius: 5px;
 }
 .bg-warning {
   background-color: #F7BC45;
+  border-radius: 5px;
 }
 .bg-error {
   background-color: #CE3010;
+  border-radius: 5px;
 }
 .bg-error-bg {
   background-color: #FFEFEC;
+  border-radius: 5px;
 }
 .bg-error-default {
   background-color: #E0593E;
+  border-radius: 5px;
 }
 .bg-error-pressed {
   background-color: #A4250C;
+  border-radius: 5px;
 }
 .bg-gray {
   background-color: #969da6;
+  border-radius: 5px;
 }
 .bg-gray-light {
   background-color: #eceff1;
+  border-radius: 5px;
 }
 .bg-danger-background-100 {
   background-color: #FFEFEC;
+  border-radius: 5px;
 }
 .bg-danger-default-700 {
   background-color: #E0593E;
+  border-radius: 5px;
 }
 .bg-danger-hover-800 {
   background-color: #CE3010;
+  border-radius: 5px;
 }
 .bg-danger-pressed-900 {
   background-color: #A4250C;
+  border-radius: 5px;
 }
 .bg-warning-background-100 {
   background-color: #FFF7E8;
+  border-radius: 5px;
 }
 .bg-warning-default-700 {
   background-color: #F7BC45;
+  border-radius: 5px;
 }
 .bg-warning-hover-800 {
   background-color: #ED8C05;
+  border-radius: 5px;
 }
 .bg-warning-pressed-900 {
   background-color: #C57505;
+  border-radius: 5px;
 }
 .bg-success-background-100 {
   background-color: #F0FFF5;
+  border-radius: 5px;
 }
 .bg-success-default-700 {
   background-color: #5ABB7A;
+  border-radius: 5px;
 }
 .bg-success-hover-800 {
   background-color: #35A95C;
+  border-radius: 5px;
 }
 .bg-success-pressed-900 {
   background-color: #298246;
+  border-radius: 5px;
 }
 .bg-secondary-background-100 {
   background-color: #F8F5FF;
+  border-radius: 5px;
 }
 .bg-secondary-default-700 {
   background-color: #8B54F7;
+  border-radius: 5px;
 }
 .bg-secondary-hover-800 {
   background-color: #6D35DE;
+  border-radius: 5px;
 }
 .bg-secondary-pressed-900 {
   background-color: #5221B5;
+  border-radius: 5px;
 }
 .bg-primary-background-100 {
   background-color: #E8F2FE;
+  border-radius: 5px;
 }
 .bg-primary-default-700 {
   background-color: #3D94F6;
+  border-radius: 5px;
 }
 .bg-primary-hover-800 {
   background-color: #166EE8;
+  border-radius: 5px;
 }
 .bg-primary-pressed-900 {
   background-color: #1562CE;
+  border-radius: 5px;
 }
 .bg-primary-1100 {
   background-color: #1D2433;
+  border-radius: 5px;
 }
 
 .container {
@@ -3567,16 +3602,29 @@ html {
   font-size: 16px;
 }
 
-*:before, *:after {
+*::before, *::after {
   box-sizing: inherit;
   white-space: nowrap;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+br {
+  display: block;
+  content: "";
+  margin-top: 5px;
+}
+
+ol, ul {
+  margin-left: 30px;
+  padding: 0;
+  font-weight: normal;
+  font-family: "Erply Ladna", sans-serif;
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
   font-weight: normal;
-  font-family: Erply Ladna, sans-serif;
+  font-family: "Erply Ladna", sans-serif;
 }
 
 input, textarea, button {
@@ -3585,6 +3633,15 @@ input, textarea, button {
 
 body {
   background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style to make iframe borderless */
+iframe {
+  border: none;
+  background-color: transparent;
+  width: 100%;
 }
 
 .layout-row-start-1 {
@@ -4078,7 +4135,7 @@ hr {
 }
 
 .accordion-row h3,
-.accordion-row button {
+.accordion-row .button {
   background: #f8f9fc;
   color: #1d2433;
   font-size: 16px;
@@ -4701,7 +4758,7 @@ ol.charts-css li {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc( 100% / 2 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 2 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 2 ), transparent calc( 100% / 2 + var( --secondary-axes-width ) ), transparent calc( 100% / 2 + var( --secondary-axes-width ) ));
+  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc(100% / 2 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 2 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 2), transparent calc(100% / 2 + var(--secondary-axes-width)), transparent calc(100% / 2 + var(--secondary-axes-width)));
   z-index: 2;
 }
 .charts-css.radial.show-2-secondary-axes tbody::after, .charts-css.pie.show-2-secondary-axes tbody::after, .charts-css.polar.show-2-secondary-axes tbody::after, .charts-css.radar.show-2-secondary-axes tbody::after {
@@ -4714,7 +4771,7 @@ ol.charts-css li {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc( 100% / 3 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 3 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 3 ), transparent calc( 100% / 3 + var( --secondary-axes-width ) ), transparent calc( 100% / 3 + var( --secondary-axes-width ) ));
+  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc(100% / 3 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 3 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 3), transparent calc(100% / 3 + var(--secondary-axes-width)), transparent calc(100% / 3 + var(--secondary-axes-width)));
   z-index: 2;
 }
 .charts-css.radial.show-3-secondary-axes tbody::after, .charts-css.pie.show-3-secondary-axes tbody::after, .charts-css.polar.show-3-secondary-axes tbody::after, .charts-css.radar.show-3-secondary-axes tbody::after {
@@ -4727,7 +4784,7 @@ ol.charts-css li {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc( 100% / 4 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 4 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 4 ), transparent calc( 100% / 4 + var( --secondary-axes-width ) ), transparent calc( 100% / 4 + var( --secondary-axes-width ) ));
+  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc(100% / 4 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 4 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 4), transparent calc(100% / 4 + var(--secondary-axes-width)), transparent calc(100% / 4 + var(--secondary-axes-width)));
   z-index: 2;
 }
 .charts-css.radial.show-4-secondary-axes tbody::after, .charts-css.pie.show-4-secondary-axes tbody::after, .charts-css.polar.show-4-secondary-axes tbody::after, .charts-css.radar.show-4-secondary-axes tbody::after {
@@ -4740,7 +4797,7 @@ ol.charts-css li {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc( 100% / 5 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 5 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 5 ), transparent calc( 100% / 5 + var( --secondary-axes-width ) ), transparent calc( 100% / 5 + var( --secondary-axes-width ) ));
+  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc(100% / 5 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 5 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 5), transparent calc(100% / 5 + var(--secondary-axes-width)), transparent calc(100% / 5 + var(--secondary-axes-width)));
   z-index: 2;
 }
 .charts-css.radial.show-5-secondary-axes tbody::after, .charts-css.pie.show-5-secondary-axes tbody::after, .charts-css.polar.show-5-secondary-axes tbody::after, .charts-css.radar.show-5-secondary-axes tbody::after {
@@ -4753,7 +4810,7 @@ ol.charts-css li {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc( 100% / 6 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 6 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 6 ), transparent calc( 100% / 6 + var( --secondary-axes-width ) ), transparent calc( 100% / 6 + var( --secondary-axes-width ) ));
+  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc(100% / 6 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 6 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 6), transparent calc(100% / 6 + var(--secondary-axes-width)), transparent calc(100% / 6 + var(--secondary-axes-width)));
   z-index: 2;
 }
 .charts-css.radial.show-6-secondary-axes tbody::after, .charts-css.pie.show-6-secondary-axes tbody::after, .charts-css.polar.show-6-secondary-axes tbody::after, .charts-css.radar.show-6-secondary-axes tbody::after {
@@ -4766,7 +4823,7 @@ ol.charts-css li {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc( 100% / 7 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 7 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 7 ), transparent calc( 100% / 7 + var( --secondary-axes-width ) ), transparent calc( 100% / 7 + var( --secondary-axes-width ) ));
+  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc(100% / 7 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 7 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 7), transparent calc(100% / 7 + var(--secondary-axes-width)), transparent calc(100% / 7 + var(--secondary-axes-width)));
   z-index: 2;
 }
 .charts-css.radial.show-7-secondary-axes tbody::after, .charts-css.pie.show-7-secondary-axes tbody::after, .charts-css.polar.show-7-secondary-axes tbody::after, .charts-css.radar.show-7-secondary-axes tbody::after {
@@ -4779,7 +4836,7 @@ ol.charts-css li {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc( 100% / 8 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 8 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 8 ), transparent calc( 100% / 8 + var( --secondary-axes-width ) ), transparent calc( 100% / 8 + var( --secondary-axes-width ) ));
+  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc(100% / 8 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 8 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 8), transparent calc(100% / 8 + var(--secondary-axes-width)), transparent calc(100% / 8 + var(--secondary-axes-width)));
   z-index: 2;
 }
 .charts-css.radial.show-8-secondary-axes tbody::after, .charts-css.pie.show-8-secondary-axes tbody::after, .charts-css.polar.show-8-secondary-axes tbody::after, .charts-css.radar.show-8-secondary-axes tbody::after {
@@ -4792,7 +4849,7 @@ ol.charts-css li {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc( 100% / 9 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 9 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 9 ), transparent calc( 100% / 9 + var( --secondary-axes-width ) ), transparent calc( 100% / 9 + var( --secondary-axes-width ) ));
+  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc(100% / 9 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 9 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 9), transparent calc(100% / 9 + var(--secondary-axes-width)), transparent calc(100% / 9 + var(--secondary-axes-width)));
   z-index: 2;
 }
 .charts-css.radial.show-9-secondary-axes tbody::after, .charts-css.pie.show-9-secondary-axes tbody::after, .charts-css.polar.show-9-secondary-axes tbody::after, .charts-css.radar.show-9-secondary-axes tbody::after {
@@ -4805,7 +4862,7 @@ ol.charts-css li {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc( 100% / 10 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 10 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 10 ), transparent calc( 100% / 10 + var( --secondary-axes-width ) ), transparent calc( 100% / 10 + var( --secondary-axes-width ) ));
+  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc(100% / 10 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 10 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 10), transparent calc(100% / 10 + var(--secondary-axes-width)), transparent calc(100% / 10 + var(--secondary-axes-width)));
   z-index: 2;
 }
 .charts-css.radial.show-10-secondary-axes tbody::after, .charts-css.pie.show-10-secondary-axes tbody::after, .charts-css.polar.show-10-secondary-axes tbody::after, .charts-css.radar.show-10-secondary-axes tbody::after {
@@ -4818,7 +4875,7 @@ ol.charts-css li {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc( 100% / 11 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 11 - var( --secondary-axes-width ) ), var(--secondary-axes-color) calc( 100% / 11 ), transparent calc( 100% / 11 + var( --secondary-axes-width ) ), transparent calc( 100% / 11 + var( --secondary-axes-width ) ));
+  background: repeating-radial-gradient(closest-side, transparent 0, transparent calc(100% / 11 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 11 - var(--secondary-axes-width)), var(--secondary-axes-color) calc(100% / 11), transparent calc(100% / 11 + var(--secondary-axes-width)), transparent calc(100% / 11 + var(--secondary-axes-width)));
   z-index: 2;
 }
 
@@ -6191,10 +6248,20 @@ ol.charts-css li {
   }
 }
 
+.content-area {
+  display: flex;
+}
+
+.site-main {
+  width: 100%;
+}
+
+/* Base Styles */
 body {
   margin: auto;
 }
 
+/* Header Information */
 .info {
   display: flex;
   flex-direction: row;
@@ -6205,48 +6272,26 @@ dt {
   margin-left: 10px;
 }
 
-.menu {
+/* Menu Styles */
+.menu, .flex-item-nav {
   display: flex;
   flex-direction: column;
   width: 250px;
-  height: 50px;
   background: #1E2833;
   margin-left: 20px;
   gap: 8px;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
-}
-
-.flex-item-nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
-  background-color: #1E2833;
-  width: 250px;
-}
-
-.menu > a {
+.menu > a, .flex-item-nav {
   border-width: 1px 0 0 0;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Main Content Block */
 .item-block-base {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: stretch;
-  background-color: #F8F9FC;
   height: 100vh;
   width: 100%;
 }
@@ -6264,35 +6309,24 @@ dt {
   background-color: #1E2833;
 }
 
+/* Contact Sub Menu */
 .contact-sub-menu {
   margin-top: 180%;
 }
 
-.profile {
+/* Profile and Contact Styles */
+.profile, .contact, .profile-name {
   padding-bottom: 15px;
   padding-top: 15px;
 }
 
-.contact {
-  padding-bottom: 15px;
-  padding-top: 15px;
-}
-
-.profile-name {
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
-
+/* Small Flex Block */
 .flex-block-small {
   display: flex;
   flex-direction: column-reverse;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: stretch;
-  background-color: #CBD7E5;
   height: 60px;
   width: 100%;
+  background-color: #CBD7E5;
 }
 
 .main-name {
@@ -6300,61 +6334,56 @@ dt {
   margin-right: 25px;
 }
 
+/* Table Flex Block */
 .flex-block-table {
-  display: flex;
-  flex-direction: column-reverse;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: stretch;
   width: 100%;
-  padding-left: 25px;
-  padding-right: 32px;
-  margin-top: 32px;
+  background-color: white;
 }
 
+/* Register Flex Block */
 .flex-block-register {
   display: flex;
   justify-content: flex-start;
 }
 
-.forms {
+/* Forms Styles */
+.forms, .forms-edit {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  align-items: start;
-  justify-content: flex-start;
   color: #3D94F6;
   box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.forms {
+  flex-direction: column;
+  align-items: start;
   margin-left: 20px;
   margin-right: 20px;
-  margin-top: 10px;
 }
 
 .forms-edit {
-  display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-evenly;
-  color: #3D94F6;
-  box-sizing: border-box;
   width: 560px;
-  margin-top: 10px;
 }
 
+/* Subtitle Flex Container */
 .flex-subtitle {
-  Display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Label Styles */
 label {
   font-size: 14px;
   color: rgba(29, 36, 51, 0.8);
 }
 
+/* Button Flex Container */
 .button-flex {
   display: flex;
   justify-content: flex-end;
@@ -6395,7 +6424,7 @@ select {
   box-sizing: border-box;
   border: none;
   background: #FFFFFF;
-  padding: 0.5em;
+  padding: 6px;
   color: #333;
   appearance: textfield;
   transition: 0.3s;
@@ -6475,9 +6504,9 @@ label {
 .select {
   background: #FFFFFF;
   display: inline-block;
-  margin-right: 16px;
   position: relative;
   cursor: pointer;
+  margin-right: 20px;
 }
 .select:last-child {
   margin-right: 0;
@@ -6512,11 +6541,11 @@ label {
   color: #3F444D;
   display: block;
   font-size: 14px;
-  margin: 0;
-  padding: 8px;
+  padding: 6px;
   transition: background-color 0.2s ease-in-out;
   width: 100%;
   cursor: pointer;
+  margin-right: 20px;
 }
 .select select:active, .select select:focus {
   background: #FFFFFF;
@@ -6529,7 +6558,7 @@ label {
 .select::after, .select::before {
   content: "";
   position: absolute;
-  right: 10px;
+  right: 15px;
   top: 40%;
   border-left: 5px solid transparent;
   border-top: 5px solid #333;
@@ -6700,8 +6729,9 @@ label {
   background-color: #fbfbfc;
   border-radius: 5px;
 }
-.input input[type=text] {
-  background: transparent;
+.input input[type=text],
+.input input[type=number] {
+  background: #fff;
   border: 0;
   box-shadow: none;
   color: rgba(29, 36, 51, 0.8);
@@ -6709,10 +6739,11 @@ label {
   margin: 0;
   outline: none;
   padding: 8px;
-  width: 90%;
+  width: 100%;
   cursor: text;
 }
-.input input[type=text]::placeholder {
+.input input[type=text]::placeholder,
+.input input[type=number]::placeholder {
   color: #969da6;
 }
 .input-withIcon input {
@@ -6761,8 +6792,9 @@ label {
 
 .formjoined {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   cursor: text;
+  width: max-content;
 }
 .formjoined-item {
   border-radius: 0;
@@ -7122,14 +7154,18 @@ thead {
 
 .scrollable-y {
   overflow-y: scroll;
-  max-height: 600px;
 }
 
 @media screen and (max-width: 580px) {
   body {
     font-size: 16px;
     line-height: 22px;
-    overflow-x: scroll;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 .wrapper {
@@ -7220,11 +7256,10 @@ td.fixed {
 @media screen and (max-width: 580px) {
   td {
     padding: 2px 16px;
-    display: block;
   }
 }
 .table th, td {
-  padding: 5px 12px 5px 22px;
+  padding: 5px 12px 5px 15px;
 }
 
 .table tr {
@@ -7232,8 +7267,16 @@ td.fixed {
   text-align: left;
 }
 
-tr:hover td {
+tr:not(.clickable):hover td {
   background: #E3E9F6;
+}
+
+.block-code {
+  white-space: initial;
+  overflow-wrap: break-word !important;
+  background: #0A253C;
+  color: #E3E9F6;
+  padding: 24px;
 }
 
 .accordion {
@@ -7419,6 +7462,29 @@ tr:hover td {
   margin-right: 100px;
 }
 
+li a {
+  font-size: 15px;
+  color: #166EE8;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a {
+  font-size: 15px;
+  color: #166EE8;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+table a {
+  color: rgba(29, 36, 51, 0.8);
+  text-decoration: none;
+}
+
+button a {
+  text-decoration: none;
+}
+
 .links {
   display: flex;
   background-color: #F1F3F9;
@@ -7541,10 +7607,11 @@ tr:hover td {
   font-size: 14px;
 }
 
+button:disabled,
 button[disabled] {
-  background: #E8F1FE;
+  background: #B4BCC7;
   border: 1px solid #E1E6EF;
-  color: rgba(29, 36, 51, 0.5);
+  color: #E1E6EF;
   font-size: 14px;
   pointer-events: none;
 }
@@ -7552,7 +7619,7 @@ button[disabled] {
 button[disabled]:hover {
   background: #E8F1FE;
   border: 1px solid #E1E6EF;
-  color: rgba(29, 36, 51, 0.5);
+  color: #23272F;
   font-size: 14px;
   pointer-events: none;
 }
@@ -7560,7 +7627,7 @@ button[disabled]:hover {
 button[disabled]:active {
   background: #E8F1FE;
   border: 1px solid #E1E6EF;
-  color: rgba(29, 36, 51, 0.5);
+  color: #23272F;
   font-size: 14px;
   pointer-events: none;
 }
@@ -8360,15 +8427,23 @@ button[disabled]:active {
   height: 20px;
   align-items: center;
   margin-right: 5px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .button a {
   text-align: center;
   letter-spacing: 0.02em;
   margin-right: 5px;
-  font-size: 16px;
-  color: #1D2433;
+  font-size: 15px;
+  color: #fff;
+}
+
+.button p {
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-right: 5px;
+  font-size: 15px;
+  color: #fff;
 }
 
 .progressText {
@@ -8537,6 +8612,7 @@ button[disabled]:active {
  */
 .border-bottom {
   border-bottom: 1px solid #d5d9db;
+  padding: 10px;
 }
 
 .border-left {
@@ -8764,6 +8840,7 @@ button[disabled]:active {
   display: block;
   color: black;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .accordion-trigger {
@@ -8845,6 +8922,111 @@ button[disabled]:active {
 .accordion-block .accordion-content.active {
   display: block;
   height: 100%;
+}
+
+/* Nav */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 0;
+  background-color: #151515;
+  box-shadow: 0 0 10px 0 #000;
+  z-index: 999;
+}
+
+/* Nav mobile. nav hamburger */
+.nav-mobile, .nav__hamburger {
+  display: none;
+}
+
+.hamburger-icon {
+  cursor: pointer;
+}
+
+.hamburgerCloseIcon {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  /* Nav desktop */
+  .nav-desktop {
+    display: none;
+  }
+  /* Nav mobile, nav hamburger */
+  .nav-mobile, .nav__hamburger {
+    display: block;
+  }
+  .tab__head {
+    margin-bottom: 16px;
+  }
+  /* Nav list */
+  .nav__list {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-direction: column;
+    background-color: #1E2833;
+    text-align: center;
+    transform: translateX(100%);
+    transition: 0.3s ease;
+    visibility: hidden;
+    z-index: 999;
+  }
+  /* Nav list active */
+  .nav__hamburger.active {
+    position: fixed;
+    right: 20px;
+    z-index: 999;
+  }
+  .nav__hamburger.active i::before {
+    color: #fff;
+  }
+  /* Nav list item */
+  .tab__head li {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    float: none;
+    list-style: none;
+    cursor: pointer;
+    line-height: normal;
+    border-bottom: none;
+    border-radius: 0;
+    overflow: auto;
+    position: static;
+    background-color: transparent;
+  }
+  /* Nav list item link */
+  .tab__head li a {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  /* Nav list active */
+  .nav__list.active {
+    transform: translateX(0);
+    transition-duration: 0.3s;
+    visibility: visible;
+  }
+  /* Nav hamburger */
+  .nav__hamburger {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  /* Nav hamburger icons */
+  .icon-Close::before, .icon-Menu-Hamburger::before {
+    font-size: 30px !important;
+  }
 }
 
 /*# sourceMappingURL=_style.css.map */
